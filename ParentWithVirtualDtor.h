@@ -19,20 +19,17 @@ public:
   ParentWithVirtualDtor () {
     std::cout << "ParentWithVirtualDtor::ctor()\n";
   };
-  ParentWithVirtualDtor (int x)
-  {
+
+  ParentWithVirtualDtor (int x) {
     mpIntVal = new int;
     *mpIntVal = x;
     std::cout << "ParentWithVirtualDtor::ctor(" << *mpIntVal << ")\n";
-
   };
 
-  virtual ~ParentWithVirtualDtor ()
-  {
+  virtual ~ParentWithVirtualDtor () {
     std::cout << "ParentWithVirtualDtor::dtor(" << *mpIntVal << ")\n";
     delete mpIntVal;
   }
-
 
 private:
   int* mpIntVal = nullptr;

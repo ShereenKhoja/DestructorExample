@@ -20,16 +20,14 @@ public:
   ChildWithVirtualDtor () {
     std::cout << "ChildWithVirtualDtor::ctor()\n";
   };
-  ChildWithVirtualDtor (int x, char c) : ParentWithVirtualDtor (x)
-  {
+
+  ChildWithVirtualDtor (int x, char c) : ParentWithVirtualDtor (x) {
     mpCharVal = new char;
     *mpCharVal = c;
     std::cout << "ChildWithVirtualDtor::ctor(" << *mpCharVal << ")\n";
-
   };
 
-  virtual ~ChildWithVirtualDtor ()
-  {
+  virtual ~ChildWithVirtualDtor () {
     std::cout << "ChildWithVirtualDtor::dtor(" << *mpCharVal << ")\n";
 
     delete mpCharVal;

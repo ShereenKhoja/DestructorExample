@@ -19,16 +19,14 @@ public:
   ParentNoVirtualDtor () {
     std::cout << "ParentNoVirtualDtor::ctor()\n";
   };
-  ParentNoVirtualDtor (int x) 
-  {
+
+  ParentNoVirtualDtor (int x) {
     mpIntVal = new int;
     *mpIntVal = x;
     std::cout << "ParentNoVirtualDtor::ctor(" << *mpIntVal << ")\n";
-
   };
 
-  ~ParentNoVirtualDtor ()
-  {
+  ~ParentNoVirtualDtor () {
     std::cout << "ParentNoVirtualDtor::dtor(" << *mpIntVal << ")\n";
 
     delete mpIntVal;

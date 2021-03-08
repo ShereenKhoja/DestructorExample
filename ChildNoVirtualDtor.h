@@ -21,20 +21,17 @@ public:
     std::cout << "ChildNoVirtualDtor::ctor()\n";
   };
 
-  ChildNoVirtualDtor (int x, char c) : ParentNoVirtualDtor (x)
-  {
+  ChildNoVirtualDtor (int x, char c) : ParentNoVirtualDtor (x)  {
     mpCharVal = new char;
     *mpCharVal = c;
     std::cout << "ChildNoVirtualDtor::ctor(" << *mpCharVal << ")\n";
   };
 
-  ~ChildNoVirtualDtor ()
-  {
+  ~ChildNoVirtualDtor () {
     std::cout << "ChildNoVirtualDtor::dtor(" << *mpCharVal << ")\n";
 
     delete mpCharVal;
   }
-
 
 private:
   char* mpCharVal=nullptr;

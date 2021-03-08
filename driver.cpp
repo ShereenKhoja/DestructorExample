@@ -37,7 +37,6 @@ int main ()
   ChildNoVirtualDtor *pcChildNoVDtor = nullptr;
   ChildWithVirtualDtor *pcChildWithVDtor = nullptr;
 
-
   pcChildNoVDtor = new ChildNoVirtualDtor (5, 'e');
   pcChildWithVDtor = new ChildWithVirtualDtor (6, 'f');
 
@@ -49,7 +48,6 @@ int main ()
 
   pcChildNoVDtor = nullptr;
   pcChildWithVDtor = nullptr;
-
 
   pcChildNoVDtor = new ChildNoVirtualDtor (7, 'g');
   pcChildWithVDtor = new ChildWithVirtualDtor (8, 'h');
@@ -69,7 +67,6 @@ int main ()
   pcChildNoVDtor = nullptr;
   pcChildWithVDtor = nullptr;
 
-  
   std::cout << "END PROGRAM\n\n";
   return EXIT_SUCCESS;
 }
